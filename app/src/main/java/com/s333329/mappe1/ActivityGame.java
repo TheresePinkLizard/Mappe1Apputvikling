@@ -21,6 +21,7 @@ public class ActivityGame extends AppCompatActivity {
     private EditText tall;
     private TextView oppgavetekst;
     private int antall = 0;
+    private int randomIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,34 +49,6 @@ public class ActivityGame extends AppCompatActivity {
        //Avslutt spill knapp
             // åpner dialogboks som spør om det er dette du vil gjøre, ok fører til første side
 
-        // kode som henter valgt antall oppgaver i sharedpreferences
-
-        //henter oppgaver
-        public void henteOppgave(){
-            //henter array
-            String[] questions = getResources().getStringArray(R.array.questions);
-            // random spørsmål
-            Random rand = new Random();
-            int randomIndex = rand.nextInt(questions.length);
-            //velger random posisjon
-            String randomQuestion = questions[randomIndex];
-
-            // skriver ut random spørsmål
-            oppgavetekst = findViewById(R.id.oppgavetekst);
-            oppgavetekst.setText(String.valueOf(randomQuestion));
-
-        }
-        //hente riktig svar
-        public boolean henterRiktigSvar(){
-            String[] answers = getResources().getStringArray(R.array.answers);
-            //tall = (EditText) findViewById(R.id.skrivinn);
-            int riktigSvar = answers[randomIndex];
-            if (et == riktigSvar){
-                return true;
-            }else{
-                return false;
-            }
-        }
 
         //knapp som sjekket svar og går til neste oppgave
         Button sjekksvaret = (Button) findViewById(R.id.sjekkSvar);
@@ -92,13 +65,42 @@ public class ActivityGame extends AppCompatActivity {
                         //og lede tilbake til startsiden
                     }
                 }else{
-                 // noe som sier svaret er feil
-                    // veiledning viser en tekst
+                    // veiledning viser at svaret er feil men er oppmuntrende
+                    //tømmer feltet som er skrevet inn
                 }
             }
         });
 
 
+    }
+    // kode som henter valgt antall oppgaver i sharedpreferences
+
+    //henter oppgaver
+    public void henteOppgave(){
+        //henter array
+        String[] questions = getResources().getStringArray(R.array.questions);
+        // random spørsmål
+        Random rand = new Random();
+        randomIndex = rand.nextInt(questions.length);
+        //velger random posisjon
+        String randomQuestion = questions[randomIndex];
+
+        // skriver ut random spørsmål
+        oppgavetekst = findViewById(R.id.oppgavetekst);
+        oppgavetekst.setText(String.valueOf(randomQuestion));
+
+    }
+    
+    //hente riktig svar
+    public boolean henterRiktigSvar(){
+        String[] answers = getResources().getStringArray(R.array.answers);
+        //tall = (EditText) findViewById(R.id.skrivinn);
+        int riktigSvar = answers[randomIndex];
+        if (et == riktigSvar){
+            return true;
+        }else{
+            return false;
+        }
     }
     @Override
     protected void onResume() {
