@@ -1,0 +1,16 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="General Settings">
+        <EditTextPreference
+            android:key="username"
+            android:title="Username"
+            android:summary="Set your username"
+            android:defaultValue=""
+            android:inputType="text" />
+        <CheckBoxPreference
+            android:key="notifications"
+            android:title="Enable Notifications"
+            android:summary="Receive notifications"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>
