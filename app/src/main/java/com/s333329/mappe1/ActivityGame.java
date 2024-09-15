@@ -3,27 +3,102 @@ package com.s333329.mappe1;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
+import java.util.Random;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityGame extends AppCompatActivity {
 
-    // Added a Global variable
-    private EditText et;
+    // Global variabel
     private Global global;
+    private EditText et;
+
+    private EditText tall;
+    private TextView oppgavetekst;
+    private int antall = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        // Initialized the Global variable
+        // initierer global verdi
         global = (Global) getApplicationContext();
-        // Set the text of EditText from the global variable
-        et.setText(global.getminvar());
+        // endrer til global verdi
         et = findViewById(R.id.skrivinn);
+        et.setText(global.getminvar());
+
+        //knappene
+        Button tallet0 = (Button) findViewById(R.id.tall0);
+        Button tallet1 = (Button) findViewById(R.id.tall1);
+        Button tallet2 = (Button) findViewById(R.id.tall2);
+        Button tallet3 = (Button) findViewById(R.id.tall3);
+        Button tallet4 = (Button) findViewById(R.id.tall4);
+        Button tallet5 = (Button) findViewById(R.id.tall5);
+        Button tallet6 = (Button) findViewById(R.id.tall6);
+        Button tallet7 = (Button) findViewById(R.id.tall7);
+        Button tallet8 = (Button) findViewById(R.id.tall8);
+        Button tallet9 = (Button) findViewById(R.id.tall9);
+
+       //Avslutt spill knapp
+            // åpner dialogboks som spør om det er dette du vil gjøre, ok fører til første side
+
+        // kode som henter valgt antall oppgaver i sharedpreferences
+
+        //henter oppgaver
+        public void henteOppgave(){
+            //henter array
+            String[] questions = getResources().getStringArray(R.array.questions);
+            // random spørsmål
+            Random rand = new Random();
+            int randomIndex = rand.nextInt(questions.length);
+            //velger random posisjon
+            String randomQuestion = questions[randomIndex];
+
+            // skriver ut random spørsmål
+            oppgavetekst = findViewById(R.id.oppgavetekst);
+            oppgavetekst.setText(String.valueOf(randomQuestion));
+
+        }
+        //hente riktig svar
+        public boolean henterRiktigSvar(){
+            String[] answers = getResources().getStringArray(R.array.answers);
+            //tall = (EditText) findViewById(R.id.skrivinn);
+            int riktigSvar = answers[randomIndex];
+            if (et == riktigSvar){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        //knapp som sjekket svar og går til neste oppgave
+        Button sjekksvaret = (Button) findViewById(R.id.sjekkSvar);
+        sjekksvaret.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (henterRiktigSvar()){
+                    henteOppgave();
+                    antall ++;
+
+                    if(antall == ){
+                        // hvis antall er samme som sharedpreference antallmattestykker
+                        // så skal man få opp en dialogboks som sier spillet er ferdig, spill igjen?
+                        //og lede tilbake til startsiden
+                    }
+                }else{
+                 // noe som sier svaret er feil
+                    // veiledning viser en tekst
+                }
+            }
+        });
+
+
     }
     @Override
     protected void onResume() {
@@ -46,7 +121,7 @@ public class ActivityGame extends AppCompatActivity {
         editor.putInt("alder", 30);
         editor.putBoolean("innlogget", true);
 
-        // Saved the current text of EditText to the global variable
+        // lagre til global variabel
         String globalText = et.getText().toString();
         global.setminvar(globalText);
 
@@ -55,13 +130,13 @@ public class ActivityGame extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outstate) {
         super.onSaveInstanceState(outstate);
-        EditText textView = findViewById(R.id.tekst);
+        EditText textView = findViewById(R.id.skrivinn);
         outstate.putString("antall", textView.getText().toString());
     }
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        EditText tw = findViewById(R.id.tekst);
+        EditText tw = findViewById(R.id.skrivinn);
         tw.setText(savedInstanceState.getString("antall"));
     }
 }

@@ -34,9 +34,7 @@ public class MainActivity extends AppCompatActivity implements MinDialog.MittInt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
+        // avslutte app
         Button avsluttknapp = findViewById(R.id.dialog);
         avsluttknapp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +42,26 @@ public class MainActivity extends AppCompatActivity implements MinDialog.MittInt
                 visDialog(view);
             }
         });
+        // starte spill
+        Button startSpill = (Button) findViewById(R.id.startspill);
+        Intent i = new Intent(this, ActivityGame.class);
+        startSpill.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(i);
+            }
+        });
 
+        // gå til om spill side
+        Button omSpill = (Button) findViewById(R.id.omSpillet);
+        Intent j = new Intent(this, ActivityAboutGame.class);
+        omSpill.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(j);
+            }
+        });
+        // gå til preferanseside
         Button preferanseknapp = findViewById(R.id.preferanser);
         Intent intent = new Intent(this,SettingsActivity.class);
         preferanseknapp.setOnClickListener(new View.OnClickListener() {

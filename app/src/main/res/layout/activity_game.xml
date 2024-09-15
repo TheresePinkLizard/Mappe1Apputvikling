@@ -14,16 +14,17 @@
         android:layout_height="52dp"
         android:layout_marginStart="256dp"
         android:layout_marginTop="188dp"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/neste"
+        android:id="@+id/sjekkSvar"
         android:layout_width="152dp"
         android:layout_height="46dp"
         android:layout_marginStart="172dp"
         android:layout_marginTop="456dp"
-        android:text="Neste"
+        android:text="OK"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -151,8 +152,8 @@
         android:id="@+id/veiledning"
         android:layout_width="290dp"
         android:layout_height="114dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="524dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="520dp"
         android:text="Her kommer det veiledning"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

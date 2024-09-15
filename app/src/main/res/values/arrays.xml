@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions">
+        <item>2 + 3</item>
+        <item>7 + 2</item>
+        <item>4 + 4</item>
+        <item>2 + 8</item>
+        <item>10 + 10</item>
+        <item>5 + 2</item>
+        <item>2 + 9</item>
+        <item>12 + 2</item>
+        <item>15 + 4</item>
+        <item>7 + 5</item>
+        <item>2 + 4</item>
+        <item>10 + 6</item>
+        <item>4 + 3</item>
+        <item>3 + 11</item>
+        <item>9 + 4</item>
+    </string-array>
+
+    <integer-array name="answers">
+        <item>5</item>
+        <item>9</item>
+        <item>8</item>
+        <item>10</item>
+        <item>20</item>
+        <item>7</item>
+        <item>11</item>
+        <item>14</item>
+        <item>19</item>
+        <item>12</item>
+        <item>6</item>
+        <item>16</item>
+        <item>7</item>
+        <item>14</item>
+        <item>13</item>
+
+    </integer-array>
+
+    <string-array name="antallOppgaver">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="spraak">
+        <item>Norsk</item>
+        <item>Tysk</item>
+    </string-array>
+</resources>

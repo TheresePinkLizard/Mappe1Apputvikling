@@ -12,5 +12,20 @@
             android:title="Enable Notifications"
             android:summary="Receive notifications"
             android:defaultValue="true" />
+        <ListPreference
+            android:key="antallmattestykker"
+            android:title="Antall mattestykker"
+            android:dialogTitle="Velg antall mattestykker"
+            android:entries="@array/antallOppgaver"
+            android:entryValues="@array/antallOppgaver"
+            android:defaultValue="5" />
+        <ListPreference
+            android:key="velgspraak"
+            android:title="Språk"
+            android:dialogTitle="Velg ønsket språk"
+            android:entries="@array/spraak"
+            android:entryValues="@array/spraak"
+            android:defaultValue="Norsk" />
     </PreferenceCategory>
+
 </PreferenceScreen>
