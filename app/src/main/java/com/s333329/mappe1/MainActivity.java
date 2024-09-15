@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements MinDialog.MittInt
         // Set the text of EditText from the global variable
         et.setText(global.getminvar());
 
-        Button dialogknapp = findViewById(R.id.dialog);
-        dialogknapp.setOnClickListener(new View.OnClickListener() {
+        Button avsluttknapp = findViewById(R.id.dialog);
+        avknapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View view) {
                 visDialog(view);

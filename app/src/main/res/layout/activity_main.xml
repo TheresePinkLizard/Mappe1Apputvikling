@@ -6,35 +6,43 @@
     tools:context=".MainActivity"
     android:id="@+id/main">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
         <Button
             android:id="@+id/dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dialog"
+            android:text="Avslutt"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/preferanser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="208dp"
-            android:layout_marginTop="220dp"
-            android:text="Preferanser"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/preferanser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="364dp"
+        android:text="Preferanser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/tekst"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/startspill"
+        android:layout_width="124dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="256dp"
+        android:text="Start Spill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/omSpillet"
+        android:layout_width="124dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="312dp"
+        android:text="Om Spillet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
