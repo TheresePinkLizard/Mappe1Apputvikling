@@ -90,13 +90,13 @@ public class ActivityGame extends AppCompatActivity {
         oppgavetekst.setText(String.valueOf(randomQuestion));
 
     }
-    
+
     //hente riktig svar
     public boolean henterRiktigSvar(){
         String[] answers = getResources().getStringArray(R.array.answers);
-        //tall = (EditText) findViewById(R.id.skrivinn);
+        tall = (EditText) findViewById(R.id.skrivinn);
         int riktigSvar = answers[randomIndex];
-        if (et == riktigSvar){
+        if (tall == riktigSvar){
             return true;
         }else{
             return false;
