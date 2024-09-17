@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--Activity_game.xml-->
+
+    <!--Endrer farge på knappene     parent delen er for å komme unna standard layout for buttons i android studio-->
+    <style name="sjekkSvar" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">#3a67fd</item>
+        <item name="strokeColor">#000000</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedShapeAppearance</item>
+    </style>
+    <!--runde av hjørner på knappene-->
+    <style name="RoundedShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <!--tastaturknapper-->
+    <style name="tastatur" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">#69d8ff</item>
+        <item name="strokeColor">#000000</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedShapeAppearance</item>
+    </style>
+   <!--avslutt knapp-->
+    <style name="avslutt" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">#ff4b3b</item>
+        <item name="strokeColor">#000000</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedShapeAppearance</item>
+        <item name="android:textAllCaps">false</item> <!--trengte denne for å få lave bokstaver-->
+    </style>
+
+</resources>
