@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/bakgrunnbilde"
-        android:layout_width="452dp"
+        android:layout_width="454dp"
         android:layout_height="820dp"
         android:layout_marginTop="1dp"
         android:src="@drawable/bakgrunn4"

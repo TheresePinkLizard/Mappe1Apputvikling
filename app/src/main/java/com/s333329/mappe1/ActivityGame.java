@@ -22,11 +22,12 @@ public class ActivityGame extends AppCompatActivity {
     private Global global;
     private TextView oppgavetekst;
     private TextView veiledning;
-    private int currentQuestionIndex;
+    private int currentQuestionIndex = 0;
+    private String svar;
 
     ArrayList<String> shuffledArray = new ArrayList<>();
     String[] originalArray;
-    int[] riktigSvarArray;
+    String[] riktigSvarArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +55,9 @@ public class ActivityGame extends AppCompatActivity {
             sjekksvaret.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    boolean isAnswerCorrect = sjekkSvar();
 
-                    if(sjekkSvar()) {
+                    if(isAnswerCorrect) {
                         currentQuestionIndex ++;
                         veiledning.setText("Riktig! Her er neste oppgave");
                         startOppgave();
@@ -70,9 +72,9 @@ public class ActivityGame extends AppCompatActivity {
                         // kommer opp dialog som spør om du skal avslutte spillet
                     }
                     //hvis svaret er feil
-                    if (!sjekkSvar()){
+                    if (!isAnswerCorrect){
                         veiledning = findViewById(R.id.veiledning);
-                        veiledning.setText("Nesten! prøv igjen! Du kan klare det!");
+                        veiledning.setText("Nesten! prøv igjen! Du kan klare det! Svaret var "+ svar);
                     }
                 }
             });
@@ -121,7 +123,7 @@ public class ActivityGame extends AppCompatActivity {
         //henter array med spørsmål
         originalArray = getResources().getStringArray(R.array.questions);
         //henter array med svar
-        riktigSvarArray = getResources().getIntArray(R.array.answers);
+        riktigSvarArray = getResources().getStringArray(R.array.answers);
 
         // lager nytt array med spørsmål som er shuffled
         List<String> nyttArray = Arrays.asList(originalArray);
@@ -135,14 +137,25 @@ public class ActivityGame extends AppCompatActivity {
         } else{
             shuffledArray = new ArrayList<>(nyttArray);
         }
-        currentQuestionIndex = 0;
 
     }
     public boolean sjekkSvar(){
-        //knapp som sjekket svar og går til neste oppgave
-        // loope igjennom shufflearray, finne match til originalarray
-        // ta indexsen av det og sammenligne med index av svar array
-        
+        // loope igjennom shufflearray, finne matchende spørsmål i originalarray
+        // ta verdien på indexen til originalarray og sammenligne med verdien på
+        // samme index i String[] riktigSvarArray;
+        EditText skrivinn = findViewById(R.id.skrivinn);
+        String brukersvar = skrivinn.getText().toString();
+
+        String currentQuestion = shuffledArray.get(currentQuestionIndex);
+        int index = Arrays.asList(originalArray).indexOf(currentQuestion);
+
+        if (index != -1) {
+            svar = riktigSvarArray[index];
+            if (brukersvar.equals(svar)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
