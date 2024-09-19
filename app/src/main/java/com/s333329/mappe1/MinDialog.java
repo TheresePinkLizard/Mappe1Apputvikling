@@ -9,6 +9,7 @@ import androidx.fragment.app.DialogFragment;
 
 public class MinDialog extends DialogFragment {
     private MittInterface callback;
+    private String title; // for å endre tittel på forskjellige dialoger
 
     public interface MittInterface {
         public void onYesClick();

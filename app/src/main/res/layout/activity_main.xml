@@ -5,9 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/main"
-    android:background="#6ef75d">
+    android:background="#000000">
 
-        <Button
+    <ImageView
+        android:id="@+id/bakgrunnbilde"
+        android:layout_width="452dp"
+        android:layout_height="820dp"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/bakgrunn4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+            style="@style/avslutt"
             android:id="@+id/dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -17,31 +28,85 @@
 
     <Button
         android:id="@+id/preferanser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="364dp"
+        style="@style/tastatur"
+        android:layout_width="162dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="488dp"
         android:text="Preferanser"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/startspill"
-        android:layout_width="124dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="256dp"
-        android:text="Start Spill"
+        android:id="@+id/omSpillet"
+        style="@style/tastatur"
+        android:layout_width="162dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="436dp"
+        android:text="Om Spillet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dogFp"
+        android:layout_width="142dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="584dp"
+        android:src="@drawable/dog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/catFp"
+        android:layout_width="142dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="240dp"
+        android:src="@drawable/cat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/unicornFp"
+        android:layout_width="137dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="556dp"
+        android:src="@drawable/unicorn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/omSpillet"
-        android:layout_width="124dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="312dp"
-        android:text="Om Spillet"
+        android:id="@+id/startspill"
+        style="@style/tastatur"
+        android:layout_width="162dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="380dp"
+        android:text="Start Spill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/lionFp"
+        android:layout_width="142dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="240dp"
+        android:src="@drawable/lion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="257dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="152dp"
+        android:text="Addisjonsspill"
+        android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

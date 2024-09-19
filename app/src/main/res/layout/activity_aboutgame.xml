@@ -5,12 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/main">
+    android:id="@+id/main"
+    android:background="#000000">
+
+
+    <ImageView
+        android:id="@+id/bakgrunnbilde"
+        android:layout_width="454dp"
+        android:layout_height="820dp"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/bakgrunn4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/catFp"
+        android:layout_width="142dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="532dp"
+        android:src="@drawable/tiger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/tilbakeStart"
-        android:layout_width="152dp"
-        android:layout_height="46dp"
+        style="@style/sjekkSvar"
+        android:layout_width="193dp"
+        android:layout_height="47dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Tilbake til start"

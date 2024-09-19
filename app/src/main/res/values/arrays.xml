@@ -46,4 +46,21 @@
         <item>Norsk</item>
         <item>Tysk</item>
     </string-array>
+
+    <string-array name="animalArray">
+         <item>Cat</item>
+         <item>Dog</item>
+         <item>bunny</item>
+         <item>mouse</item>
+         <item>chicken</item>
+         <item>fox</item>
+         <item>racoon</item>
+         <item>pig</item>
+         <item>monkeynew</item>
+         <item>bull</item>
+         <item>tiger</item>
+         <item>bear</item>
+         <item>panda</item>
+         <item>unicorn</item>
+    </string-array>
 </resources>

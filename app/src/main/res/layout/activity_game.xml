@@ -6,198 +6,216 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/main"
-    android:background="#21ff85">
-
-
-    <EditText
-        android:id="@+id/skrivinn"
-        android:layout_width="114dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="188dp"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="#000000">
 
     <ImageView
-        android:id="@+id/animals"
-        android:layout_width="110dp"
-        android:layout_height="101dp"
-        android:src="@drawable/mouse"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="57dp" />
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/sjekkSvar"
-        android:id="@+id/sjekkSvar"
-        android:layout_width="152dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="600dp"
-        android:text="OK"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall8"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="448dp"
-        android:text="8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall0"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="596dp"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall1"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="548dp"
-        android:text="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall3"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="548dp"
-        android:text="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall7"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="448dp"
-        android:text="7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall9"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="448dp"
-        android:text="9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall5"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="496dp"
-        android:text="5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall6"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="496dp"
-        android:text="6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall4"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="496dp"
-        android:text="4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        style="@style/tastatur"
-        android:id="@+id/tall2"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="548dp"
-        android:text="2"
+        android:id="@+id/bakgrunnbilde"
+        android:layout_width="454dp"
+        android:layout_height="820dp"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/bakgrunn4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/mattestykke"
-        android:layout_width="133dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="188dp"
-        android:text="Mattestykke"
+        android:id="@+id/bak"
+        style="@style/bak"
+        android:layout_width="295dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="194dp"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/erLik"
-        android:layout_width="32dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="216dp"
-        android:layout_marginTop="212dp"
+        style="@style/oppgavetekst"
+        android:layout_width="43dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="196dp"
         android:text="="
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/skrivinn"
+        style="@style/oppgavetekst"
+        android:layout_width="91dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="196dp"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/oppgavetekst"
+        style="@style/oppgavetekst"
+        android:layout_width="163dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="196dp"
+        android:text="Oppgavetekst"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/animals"
+        android:layout_width="112dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="160dp"
+        android:src="@drawable/mouse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall8"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="384dp"
+        android:text="8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall4"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="432dp"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall3"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="484dp"
+        android:text="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall7"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="384dp"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall1"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="484dp"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall6"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="432dp"
+        android:text="6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall2"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="484dp"
+        android:text="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sjekkSvar"
+        style="@style/sjekkSvar"
+        android:layout_width="151dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="532dp"
+        android:text="OK"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall5"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="432dp"
+        android:text="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall9"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="384dp"
+        android:text="9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall0"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="532dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
         android:id="@+id/veiledning"
-        android:layout_width="290dp"
-        android:layout_height="114dp"
+        android:layout_width="370dp"
+        android:layout_height="39dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="276dp"
         android:text="Her kommer det veiledning"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         style="@style/avslutt"
         android:id="@+id/avsluttSpillKnapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AvsluttSpill"
+        android:text="Avslutt Spill"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="9dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:id="@+id/oppgavetekst"
-        android:layout_width="180dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="108dp"
-        android:text="Oppgavetekst"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
