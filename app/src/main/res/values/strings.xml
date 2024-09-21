@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Mappe1</string>
-    <string name="omspillettekst">Dette er et matteopplærings-app ment for unge barn slik at de kan utfordre seg på enkle addisjonsregnestykker og få veiledning rundt mattestykkene</string>
+    <string name="omspillettekst">Dette er et matteopplærings-app ment for unge barn slik at de kan utfordre seg på enkle addisjonsregnestykker og få tilbakemelding mattestykkene</string>
+    <string name="riktig1">Riktig! Her er neste oppgave</string>
+    <string name="riktig2">Riktig! du er på siste spørsmål! Du har nesten klart det!</string>
+    <string name="feil1">Nesten! prøv igjen! Du kan klare det! Svaret var</string>
+    <string name="avslutt_spill">Avslutt spill</string>
+    <string name="avslutt">Avslutt</string>
+    <string name="ok">Ok</string>
+    <string name="tittel">Addisjonsspill</string>
+    <string name="startspill">Start spill</string>
+    <string name="omspillet">Om Spillet</string>
+    <string name="preferanser">Preferanser</string>
+
 </resources>

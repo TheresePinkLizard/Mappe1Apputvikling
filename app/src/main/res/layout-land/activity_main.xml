@@ -5,25 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/main"
-    android:orientation="vertical"
-    android:background="@drawable/bakgrunn4">
+    android:background="@drawable/horizontal"
+    android:orientation="horizontal">
+
 
     <Button
-            style="@style/avslutt"
-            android:id="@+id/dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/avslutt"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/dialog"
+        style="@style/avslutt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/avslutt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/preferanser"
         style="@style/tastatur"
         android:layout_width="162dp"
         android:layout_height="57dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="488dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="296dp"
         android:text="@string/preferanser"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,8 +36,8 @@
         style="@style/tastatur"
         android:layout_width="162dp"
         android:layout_height="57dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="436dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="232dp"
         android:text="@string/omspillet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,8 +46,8 @@
         android:id="@+id/dogFp"
         android:layout_width="142dp"
         android:layout_height="128dp"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="584dp"
+        android:layout_marginStart="476dp"
+        android:layout_marginTop="252dp"
         android:src="@drawable/dog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -53,8 +56,8 @@
         android:id="@+id/catFp"
         android:layout_width="142dp"
         android:layout_height="128dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="72dp"
         android:src="@drawable/cat"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,8 +66,8 @@
         android:id="@+id/unicornFp"
         android:layout_width="137dp"
         android:layout_height="144dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="556dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="224dp"
         android:src="@drawable/unicorn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -74,8 +77,8 @@
         style="@style/tastatur"
         android:layout_width="162dp"
         android:layout_height="57dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="164dp"
         android:text="@string/startspill"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -84,8 +87,8 @@
         android:id="@+id/lionFp"
         android:layout_width="142dp"
         android:layout_height="128dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginStart="524dp"
+        android:layout_marginTop="104dp"
         android:src="@drawable/lion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -94,8 +97,8 @@
         android:id="@+id/header"
         android:layout_width="257dp"
         android:layout_height="87dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="84dp"
         android:text="@string/tittel"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"

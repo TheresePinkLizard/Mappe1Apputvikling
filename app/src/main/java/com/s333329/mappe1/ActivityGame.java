@@ -3,10 +3,12 @@ package com.s333329.mappe1;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,10 +26,17 @@ public class ActivityGame extends AppCompatActivity {
     private TextView veiledning;
     private int currentQuestionIndex = 0;
     private String svar;
+    private int animalcounter = 0;
 
     ArrayList<String> shuffledArray = new ArrayList<>();
     String[] originalArray;
     String[] riktigSvarArray;
+
+    //Dyrebilder
+    int[] animalArray = {R.drawable.mouse, R.drawable.cat, R.drawable.dog,  R.drawable.monkeynew,
+            R.drawable.bear, R.drawable.bunny, R.drawable.chicken,  R.drawable.fox,  R.drawable.bull,
+            R.drawable.lion,  R.drawable.pig,  R.drawable.panda,  R.drawable.racoon,
+            R.drawable.tiger, R.drawable.unicorn};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +53,10 @@ public class ActivityGame extends AppCompatActivity {
         String antallmattestykker = sharedPreferences.getString("antallmattestykker", "5");
       global.setminvar(antallmattestykker);
 
-
         // henter oppgaver og lager et array med shuffles spørsmål med global verdi som input
         int numberOfQuestions = Integer.parseInt(global.getminvar());
         henteOppgave(numberOfQuestions);
+        //starter oppgave ved å sende til display
         startOppgave();
 
         // sjekker om svaret er rikitig når man trykker på knappen
@@ -56,15 +65,21 @@ public class ActivityGame extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     boolean isAnswerCorrect = sjekkSvar();
+                    TextView veiledning = findViewById(R.id.veiledning);
 
                     if(isAnswerCorrect) {
                         currentQuestionIndex ++;
-                        veiledning.setText("Riktig! Her er neste oppgave");
+                        veiledning.setText(getString(R.string.riktig1));
                         startOppgave();
+                        animalcounter++;
+                        ImageView imageView = findViewById(R.id.animals);
+                        imageView.setImageResource(animalArray[animalcounter]);
+                        EditText skrivinnfelt = findViewById(R.id.skrivinn);
+                        skrivinnfelt.setText("");
                     }
                     // melding om at man er på siste oppgave
                     if (currentQuestionIndex == shuffledArray.size()){
-                        veiledning.setText("Riktig! du er på siste spørsmål! Du har nesten klart det!");
+                        veiledning.setText(R.string.riktig2);
                     }
 
                     // hvis man er ferdig med spillet
@@ -74,7 +89,7 @@ public class ActivityGame extends AppCompatActivity {
                     //hvis svaret er feil
                     if (!isAnswerCorrect){
                         veiledning = findViewById(R.id.veiledning);
-                        veiledning.setText("Nesten! prøv igjen! Du kan klare det! Svaret var "+ svar);
+                        veiledning.setText(R.string.feil1);
                     }
                 }
             });
@@ -83,7 +98,7 @@ public class ActivityGame extends AppCompatActivity {
         int [] buttonIds = { R.id.tall0, R.id.tall1, R.id.tall2, R.id.tall3,R.id.tall4, R.id.tall5,
                 R.id.tall6, R.id.tall7, R.id.tall8, R.id.tall9};
 
-        final EditText skrivinnfelt = findViewById(R.id.skrivinn);
+        EditText skrivinnfelt = findViewById(R.id.skrivinn);
 
         // hvis en knapp trykkes så flyttes verdien inn i tekstfeltet
         for (int id : buttonIds){
@@ -117,6 +132,9 @@ public class ActivityGame extends AppCompatActivity {
     public void startOppgave(){
         oppgavetekst = findViewById(R.id.oppgavetekst);
         oppgavetekst.setText(String.valueOf(shuffledArray.get(currentQuestionIndex)));
+        // Hvert spørsmål har et bilde av et dyr
+        ImageView imageView = findViewById(R.id.animals);
+        imageView.setImageResource(animalArray[animalcounter]);
     }
     //henter oppgaver og putter verdier i array
     public void henteOppgave(int antall){
@@ -143,6 +161,7 @@ public class ActivityGame extends AppCompatActivity {
         // loope igjennom shufflearray, finne matchende spørsmål i originalarray
         // ta verdien på indexen til originalarray og sammenligne med verdien på
         // samme index i String[] riktigSvarArray;
+/*
         EditText skrivinn = findViewById(R.id.skrivinn);
         String brukersvar = skrivinn.getText().toString();
 
@@ -153,9 +172,12 @@ public class ActivityGame extends AppCompatActivity {
             svar = riktigSvarArray[index];
             if (brukersvar.equals(svar)) {
                 return true;
-            }
-        }
-        return false;
+            }return false;
+        } */
+        return true;
+
+
+
     }
 
 

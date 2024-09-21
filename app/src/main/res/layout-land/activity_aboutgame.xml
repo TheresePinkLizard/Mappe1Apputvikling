@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/horizontal"
     tools:context=".MainActivity"
     android:id="@+id/main"
-    android:background="@drawable/bakgrunn4">
+    android:orientation="horizontal">
 
 
     <ImageView
@@ -34,18 +35,18 @@
         android:id="@+id/textView1"
         android:layout_width="200dp"
         android:layout_height="74dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="88dp"
         android:text="Om spillet"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="330dp"
-        android:layout_height="253dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="280dp"
+        android:layout_width="601dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="172dp"
         android:text="@string/omspillettekst"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"

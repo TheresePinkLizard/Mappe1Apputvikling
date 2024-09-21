@@ -2,18 +2,18 @@
 
     <PreferenceCategory
 
-        android:title="General Settings">
+        android:title="Innstillinger">
 
         <EditTextPreference
             android:key="username"
-            android:title="Username"
-            android:summary="Set your username"
+            android:title="Brukernavn"
+            android:summary="Endre ditt brukernavn"
             android:defaultValue=""
             android:inputType="text" />
         <CheckBoxPreference
             android:key="notifications"
-            android:title="Enable Notifications"
-            android:summary="Receive notifications"
+            android:title="Slå på Notifikasjoner"
+            android:summary="Motta Notifikasjoner"
             android:defaultValue="true" />
         <ListPreference
             android:key="antallmattestykker"
