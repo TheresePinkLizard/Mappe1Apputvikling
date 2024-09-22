@@ -71,7 +71,6 @@ public class ActivityGame extends AppCompatActivity {
 
         // henter oppgaver og lager et array med shuffles spørsmål med global verdi som input
         int numberOfQuestions = Integer.parseInt(global.getminvar());
-
         if (shuffledArray.isEmpty()){
             henteOppgave(numberOfQuestions);
         }
@@ -152,7 +151,6 @@ public class ActivityGame extends AppCompatActivity {
         }
 
         //Avslutt spill knapp
-        // åpner dialogboks som spør om det er dette du vil gjøre, ok fører til første side
         Button tilbakeTilStart = (Button) findViewById(R.id.avsluttSpillKnapp);
         Intent i = new Intent(this, MainActivity.class);
         tilbakeTilStart.setOnClickListener(new View.OnClickListener(){
@@ -210,6 +208,8 @@ public class ActivityGame extends AppCompatActivity {
         // ta verdien på indexen til originalarray og sammenligne med verdien på
         // samme index i String[] riktigSvarArray;
 /*
+-----Dette er kommentert ut fordi det ikke fungerer ----
+
         EditText skrivinn = findViewById(R.id.skrivinn);
         String brukersvar = skrivinn.getText().toString();
 
@@ -222,7 +222,7 @@ public class ActivityGame extends AppCompatActivity {
                 return true;
             }return false;
         } */
-        return true;
+        return true; // lagt inn dette for å kunne teste andre elementer i spillet
     }
 
 
