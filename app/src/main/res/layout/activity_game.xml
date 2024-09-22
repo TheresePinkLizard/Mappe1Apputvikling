@@ -9,36 +9,14 @@
     android:orientation="vertical"
     android:background="@drawable/bakgrunn4">
 
+
     <EditText
         android:id="@+id/bak"
         style="@style/bak"
         android:layout_width="295dp"
         android:layout_height="56dp"
         android:layout_marginStart="86dp"
-        android:layout_marginTop="194dp"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/erLik"
-        style="@style/oppgavetekst"
-        android:layout_width="43dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="196dp"
-        android:text="="
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/skrivinn"
-        style="@style/oppgavetekst"
-        android:layout_width="91dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="226dp"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -49,9 +27,45 @@
         android:layout_width="163dp"
         android:layout_height="52dp"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="196dp"
-        android:text="Oppgavetekst"
+        android:layout_marginTop="228dp"
         android:gravity="center"
+        android:text="Oppgavetekst"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/erLik"
+        style="@style/oppgavetekst"
+        android:layout_width="43dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="228dp"
+        android:gravity="center"
+        android:text="="
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clear"
+        style="@style/sjekkSvar"
+        android:layout_width="93dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="280dp"
+        android:text="Tøm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/skrivinn"
+        style="@style/oppgavetekst"
+        android:layout_width="91dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="228dp"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,7 +74,7 @@
         android:layout_width="112dp"
         android:layout_height="104dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="192dp"
         android:src="@drawable/mouse"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -95,17 +109,6 @@
         android:layout_marginStart="244dp"
         android:layout_marginTop="384dp"
         android:text="6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/clear"
-        style="@style/sjekkSvar"
-        android:layout_width="93dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="260dp"
-        android:text="Tøm"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -200,10 +203,10 @@
 
     <TextView
         android:id="@+id/veiledning"
-        android:layout_width="242dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="264dp"
+        android:layout_width="258dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="176dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -222,8 +225,8 @@
         android:id="@+id/oppgavetittel"
         android:layout_width="137dp"
         android:layout_height="48dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="128dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

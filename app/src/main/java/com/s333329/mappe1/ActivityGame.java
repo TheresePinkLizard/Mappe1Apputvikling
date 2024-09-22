@@ -57,6 +57,7 @@ public class ActivityGame extends AppCompatActivity {
             oppgcounter = savedInstanceState.getInt("oppgcounter");
             currentQuestionIndex = savedInstanceState.getInt("currentQuestionIndex");
             shuffledArray = savedInstanceState.getStringArrayList("shuffledArray");
+
         }
 
         // initierer global verdi
@@ -70,8 +71,13 @@ public class ActivityGame extends AppCompatActivity {
 
         // henter oppgaver og lager et array med shuffles spørsmål med global verdi som input
         int numberOfQuestions = Integer.parseInt(global.getminvar());
-        henteOppgave(numberOfQuestions);
+
+        if (shuffledArray.isEmpty()){
+            henteOppgave(numberOfQuestions);
+        }
+
         //starter oppgave ved å sende til display
+        oppgaveteksten = findViewById(R.id.oppgavetekst);
         startOppgave();
 
         // sjekker om svaret er riktig når man trykker på knappen
@@ -86,6 +92,7 @@ public class ActivityGame extends AppCompatActivity {
                         // hopper til neste oppgave, setter tekst og velger nytt bilde fra animalArray
                         currentQuestionIndex ++;
                         veiledning.setText(getString(R.string.riktig1));
+                        oppgaveteksten = findViewById(R.id.oppgavetekst);
                         startOppgave();
                         animalcounter++;
                         ImageView imageView = findViewById(R.id.animals);
@@ -96,8 +103,6 @@ public class ActivityGame extends AppCompatActivity {
                         // henter id til nåværende bilde
                         int resId = getResources().getIdentifier(imageViewId, "id", getPackageName());
                         ImageView samletDyr = findViewById(resId);
-
-
                         samletDyr.setImageResource(animalArray[samletcounter]);
                         samletcounter ++;
                         if (samletcounter == animalArray.length){
@@ -169,9 +174,8 @@ public class ActivityGame extends AppCompatActivity {
 
 
     }
-
+// kode som starter hver oppgave
     public void startOppgave(){
-        oppgaveteksten = findViewById(R.id.oppgavetekst);
         oppgaveteksten.setText(String.valueOf(shuffledArray.get(currentQuestionIndex)));
         // Hvert spørsmål har et bilde av et dyr
         ImageView imageView = findViewById(R.id.animals);
@@ -219,9 +223,6 @@ public class ActivityGame extends AppCompatActivity {
             }return false;
         } */
         return true;
-
-
-
     }
 
 
@@ -262,6 +263,7 @@ public class ActivityGame extends AppCompatActivity {
         outstate.putInt("oppgcounter", oppgcounter);
         outstate.putInt("currentQuestionIndex", currentQuestionIndex);
         outstate.putStringArrayList("shuffledArray", shuffledArray);
+
 
     }
     @Override

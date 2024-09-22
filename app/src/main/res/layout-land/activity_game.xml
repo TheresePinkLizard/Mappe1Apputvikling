@@ -9,47 +9,14 @@
     android:background="@drawable/horizontal"
     android:orientation="horizontal">
 
-
-    <Button
-        android:id="@+id/clear"
-        style="@style/sjekkSvar"
-        android:layout_width="93dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="216dp"
-        android:text="Tøm"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/veiledning"
-        android:layout_width="250dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="260dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/bak"
         style="@style/bak"
         android:layout_width="294dp"
         android:layout_height="56dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="158dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="234dp"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/erLik"
-        style="@style/oppgavetekst"
-        android:layout_width="43dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="160dp"
-        android:gravity="center"
-        android:text="="
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,20 +25,19 @@
         style="@style/oppgavetekst"
         android:layout_width="163dp"
         android:layout_height="52dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="236dp"
         android:gravity="center"
         android:text="Oppgavetekst"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/animals"
-        android:layout_width="112dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="124dp"
-        android:src="@drawable/mouse"
+    <TextView
+        android:id="@+id/veiledning"
+        android:layout_width="299dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,9 +46,44 @@
         style="@style/oppgavetekst"
         android:layout_width="91dp"
         android:layout_height="52dp"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="236dp"
         android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/erLik"
+        style="@style/oppgavetekst"
+        android:layout_width="43dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="273dp"
+        android:layout_marginTop="236dp"
+        android:gravity="center"
+        android:text="="
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clear"
+        style="@style/sjekkSvar"
+        android:layout_width="93dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="292dp"
+        android:text="Tøm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/animals"
+        android:layout_width="112dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/mouse"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -212,9 +213,8 @@
         android:id="@+id/oppgavetittel"
         android:layout_width="137dp"
         android:layout_height="48dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="92dp"
-        android:text="Oppgave 1"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="128dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -232,10 +232,10 @@
 
     <EditText
         android:id="@+id/collectionanimals"
-        android:layout_width="201dp"
-        android:layout_height="37dp"
+        android:layout_width="197dp"
+        android:layout_height="51dp"
         android:layout_marginStart="212dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="Dyrene du har samlet:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
