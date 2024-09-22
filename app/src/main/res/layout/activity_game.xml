@@ -65,69 +65,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/tall8"
-        style="@style/tastatur"
-        android:layout_width="75dp"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sjekkSvar"
+        style="@style/sjekkSvar"
+        android:layout_width="151dp"
         android:layout_height="50dp"
         android:layout_marginStart="168dp"
-        android:layout_marginTop="384dp"
-        android:text="8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tall4"
-        style="@style/tastatur"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="432dp"
-        android:text="4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tall3"
-        style="@style/tastatur"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="244dp"
         android:layout_marginTop="484dp"
-        android:text="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tall7"
-        style="@style/tastatur"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="384dp"
-        android:text="7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tall1"
-        style="@style/tastatur"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="484dp"
-        android:text="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tall6"
-        style="@style/tastatur"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="432dp"
-        android:text="6"
+        android:text="@string/ok"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -137,30 +82,41 @@
         android:layout_width="75dp"
         android:layout_height="50dp"
         android:layout_marginStart="168dp"
-        android:layout_marginTop="484dp"
+        android:layout_marginTop="436dp"
         android:text="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/sjekkSvar"
-        style="@style/sjekkSvar"
-        android:layout_width="151dp"
+    <Button
+        android:id="@+id/tall6"
+        style="@style/tastatur"
+        android:layout_width="75dp"
         android:layout_height="50dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="532dp"
-        android:text="@string/ok"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="384dp"
+        android:text="6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/tall5"
+        android:id="@+id/clear"
+        style="@style/sjekkSvar"
+        android:layout_width="93dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="260dp"
+        android:text="Tøm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall8"
         style="@style/tastatur"
         android:layout_width="75dp"
         android:layout_height="50dp"
         android:layout_marginStart="168dp"
-        android:layout_marginTop="432dp"
-        android:text="5"
+        android:layout_marginTop="336dp"
+        android:text="8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -170,7 +126,7 @@
         android:layout_width="75dp"
         android:layout_height="50dp"
         android:layout_marginStart="244dp"
-        android:layout_marginTop="384dp"
+        android:layout_marginTop="336dp"
         android:text="9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -181,19 +137,73 @@
         android:layout_width="75dp"
         android:layout_height="50dp"
         android:layout_marginStart="92dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="484dp"
         android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall4"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="384dp"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall7"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="336dp"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall3"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="436dp"
+        android:text="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall1"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="436dp"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tall5"
+        style="@style/tastatur"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="384dp"
+        android:text="5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/veiledning"
-        android:layout_width="370dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="276dp"
-        android:text="Her kommer det veiledning"
+        android:layout_width="242dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="264dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -209,12 +219,171 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/tittel"
+        android:id="@+id/oppgavetittel"
         android:layout_width="137dp"
         android:layout_height="48dp"
         android:layout_marginStart="104dp"
         android:layout_marginTop="124dp"
-        android:text="Oppgave 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/collectionanimals"
+        android:layout_width="217dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="560dp"
+        android:text="Dyrene du har samlet:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet2"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet4"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet5"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet6"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet7"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet8"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet15"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet9"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet10"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet11"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet12"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet13"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet14"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet3"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet1"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

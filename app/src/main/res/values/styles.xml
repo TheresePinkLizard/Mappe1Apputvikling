@@ -5,7 +5,7 @@
 
     <!--Endrer farge på knappene     parent delen er for å komme unna standard layout for buttons i android studio-->
     <style name="sjekkSvar" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="backgroundTint">#3a67fd</item>
+        <item name="backgroundTint">#4e77ff</item>
         <item name="strokeColor">#000000</item>
         <item name="strokeWidth">2dp</item>
         <item name="android:textColor">#000000</item>

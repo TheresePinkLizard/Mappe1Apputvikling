@@ -27,6 +27,8 @@ public class ActivityGame extends AppCompatActivity {
     private int currentQuestionIndex = 0;
     private String svar;
     private int animalcounter = 0;
+    private int samletcounter = 0;
+    private int oppgcounter = 1;
 
     ArrayList<String> shuffledArray = new ArrayList<>();
     String[] originalArray;
@@ -37,6 +39,11 @@ public class ActivityGame extends AppCompatActivity {
             R.drawable.bear, R.drawable.bunny, R.drawable.chicken,  R.drawable.fox,  R.drawable.bull,
             R.drawable.lion,  R.drawable.pig,  R.drawable.panda,  R.drawable.racoon,
             R.drawable.tiger, R.drawable.unicorn};
+
+    //knappene
+    int [] buttonIds = { R.id.tall0, R.id.tall1, R.id.tall2, R.id.tall3,R.id.tall4, R.id.tall5,
+            R.id.tall6, R.id.tall7, R.id.tall8, R.id.tall9};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +66,7 @@ public class ActivityGame extends AppCompatActivity {
         //starter oppgave ved å sende til display
         startOppgave();
 
-        // sjekker om svaret er rikitig når man trykker på knappen
+        // sjekker om svaret er riktig når man trykker på knappen
             Button sjekksvaret = (Button) findViewById(R.id.sjekkSvar);
             sjekksvaret.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,14 +75,31 @@ public class ActivityGame extends AppCompatActivity {
                     TextView veiledning = findViewById(R.id.veiledning);
 
                     if(isAnswerCorrect) {
+                        // hopper til neste oppgave, setter tekst og velger nytt bilde fra animalArray
                         currentQuestionIndex ++;
                         veiledning.setText(getString(R.string.riktig1));
                         startOppgave();
                         animalcounter++;
                         ImageView imageView = findViewById(R.id.animals);
                         imageView.setImageResource(animalArray[animalcounter]);
+
+                        // kode for å vise hvilke dyr som er samlet
+                        String imageViewId = "samlet" + (samletcounter + 1);
+                        // henter id til nåværende bilde
+                        int resId = getResources().getIdentifier(imageViewId, "id", getPackageName());
+                        ImageView samletDyr = findViewById(resId);
+                        samletDyr.setImageResource(animalArray[samletcounter]);
+                        samletcounter ++;
+                        if (samletcounter == animalArray.length){
+                            samletcounter = 0;
+                        }
+
+                        // resetter tekstfelt på veiledning og tittel
                         EditText skrivinnfelt = findViewById(R.id.skrivinn);
                         skrivinnfelt.setText("");
+                        EditText tittel = findViewById(R.id.oppgavetittel);
+                        oppgcounter++;
+                        tittel.setText("Oppgave " + oppgcounter);
                     }
                     // melding om at man er på siste oppgave
                     if (currentQuestionIndex == shuffledArray.size()){
@@ -94,9 +118,6 @@ public class ActivityGame extends AppCompatActivity {
                 }
             });
 
-        //knappene
-        int [] buttonIds = { R.id.tall0, R.id.tall1, R.id.tall2, R.id.tall3,R.id.tall4, R.id.tall5,
-                R.id.tall6, R.id.tall7, R.id.tall8, R.id.tall9};
 
         EditText skrivinnfelt = findViewById(R.id.skrivinn);
 
@@ -125,8 +146,6 @@ public class ActivityGame extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
     }
 
     public void startOppgave(){
@@ -135,6 +154,9 @@ public class ActivityGame extends AppCompatActivity {
         // Hvert spørsmål har et bilde av et dyr
         ImageView imageView = findViewById(R.id.animals);
         imageView.setImageResource(animalArray[animalcounter]);
+
+        EditText tittel = findViewById(R.id.oppgavetittel);
+        tittel.setText("Oppgave " + oppgcounter);
     }
     //henter oppgaver og putter verdier i array
     public void henteOppgave(int antall){
