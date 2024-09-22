@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mappe1</string>
-    <string name="omspillettekst">Dies ist eine Mathe-Lern-App für kleine Kinder, damit sie sich mit einfachen Additions-Matheaufgaben auseinandersetzen und Feedback zu den Mathe-Aufgaben erhalten können</string>
+    <string name="omspillettekst">Hallo an dich! \nDas Tierreich braucht deine Hilfe, um es zu lösen
+        Additionsrechner! \nJedes dieser Tiere hat seine eigene Berechnung und ob Sie das können
+        Mit diesen kannst du bis zu 15 Tiere sammeln! Sie können die Anzahl der Berechnungen unter „Einstellungen“ anpassen.</string>
     <string name="riktig1">Rechts! Hier ist die nächste Aufgabe</string>
     <string name="riktig2">Rechts! Du bist bei der letzten Frage! Du hast es fast geschafft!</string>
     <string name="feil1">Fast! versuchen Sie es erneut! Du kannst es schaffen! Die Antwort war</string>

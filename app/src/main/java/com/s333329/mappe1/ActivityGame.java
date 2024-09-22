@@ -22,7 +22,7 @@ public class ActivityGame extends AppCompatActivity {
 
     // Global variabel
     private Global global;
-    private TextView oppgavetekst;
+    private TextView oppgaveteksten;
     private TextView veiledning;
     private int currentQuestionIndex = 0;
     private String svar;
@@ -50,6 +50,14 @@ public class ActivityGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        // sørger for at alt blir lagret selv om mobilen roteres
+        if(savedInstanceState != null){
+            animalcounter = savedInstanceState.getInt("animalcounter");
+            samletcounter = savedInstanceState.getInt("samletcounter");
+            oppgcounter = savedInstanceState.getInt("oppgcounter");
+            currentQuestionIndex = savedInstanceState.getInt("currentQuestionIndex");
+            shuffledArray = savedInstanceState.getStringArrayList("shuffledArray");
+        }
 
         // initierer global verdi
         global = (Global) getApplicationContext();
@@ -88,6 +96,8 @@ public class ActivityGame extends AppCompatActivity {
                         // henter id til nåværende bilde
                         int resId = getResources().getIdentifier(imageViewId, "id", getPackageName());
                         ImageView samletDyr = findViewById(resId);
+
+
                         samletDyr.setImageResource(animalArray[samletcounter]);
                         samletcounter ++;
                         if (samletcounter == animalArray.length){
@@ -146,11 +156,23 @@ public class ActivityGame extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        // tømme skriv inn felt ved å trykke på knappen tøm
+        Button empthyfield = (Button) findViewById(R.id.clear);
+        empthyfield.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText skrivinnfelt = findViewById(R.id.skrivinn);
+                skrivinnfelt.setText("");
+            }
+        });
+
+
     }
 
     public void startOppgave(){
-        oppgavetekst = findViewById(R.id.oppgavetekst);
-        oppgavetekst.setText(String.valueOf(shuffledArray.get(currentQuestionIndex)));
+        oppgaveteksten = findViewById(R.id.oppgavetekst);
+        oppgaveteksten.setText(String.valueOf(shuffledArray.get(currentQuestionIndex)));
         // Hvert spørsmål har et bilde av et dyr
         ImageView imageView = findViewById(R.id.animals);
         imageView.setImageResource(animalArray[animalcounter]);
@@ -235,6 +257,12 @@ public class ActivityGame extends AppCompatActivity {
         super.onSaveInstanceState(outstate);
         EditText textView = findViewById(R.id.skrivinn);
         outstate.putString("antall", textView.getText().toString());
+        outstate.putInt("animalcounter", animalcounter);
+        outstate.putInt("samletcounter", samletcounter);
+        outstate.putInt("oppgcounter", oppgcounter);
+        outstate.putInt("currentQuestionIndex", currentQuestionIndex);
+        outstate.putStringArrayList("shuffledArray", shuffledArray);
+
     }
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
