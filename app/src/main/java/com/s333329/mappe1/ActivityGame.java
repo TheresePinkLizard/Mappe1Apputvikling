@@ -120,12 +120,12 @@ public class ActivityGame extends AppCompatActivity {
                         tittel.setText("Oppgave " + oppgcounter);
                     }
                     // melding om at man er på siste oppgave
-                    if (currentQuestionIndex == shuffledArray.size()){
+                    if (currentQuestionIndex == numberOfQuestions-1){
                         veiledning.setText(R.string.riktig2);
                     }
 
                     // hvis man er ferdig med spillet
-                    if(currentQuestionIndex == shuffledArray.size()+1){
+                    if(currentQuestionIndex == numberOfQuestions){
                         // kommer opp dialog som spør om du skal avslutte spillet
                     }
                     //hvis svaret er feil
@@ -234,9 +234,6 @@ public class ActivityGame extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         SharedPreferences sharedPreferences = getSharedPreferences("MinePreferanser", Context.MODE_PRIVATE);
-        String username = sharedPreferences.getString("brukernavn", "");
-        int age = sharedPreferences.getInt("alder", 0);
-        boolean isLoggedIn = sharedPreferences.getBoolean("innlogget", false);
 
         // Restored the text of EditText from the global variable
         String antallmattestykker = sharedPreferences.getString("antallmattestykker", "5");
@@ -247,9 +244,6 @@ public class ActivityGame extends AppCompatActivity {
         super.onPause();
         SharedPreferences sharedPreferences = getSharedPreferences("MinePreferanser", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("brukernavn", "JohnDoe");
-        editor.putInt("alder", 30);
-        editor.putBoolean("innlogget", true);
 
         // lagre til global variabel
         String antallmattestykker = sharedPreferences.getString("antallmattestykker", "5");
