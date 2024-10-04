@@ -28,6 +28,7 @@ public class ActivityGame extends AppCompatActivity {
     private int animalcounter = 0;
     private int samletcounter = 0;
     private int oppgcounter = 1;
+    private String svar;
 
     ArrayList<Integer> shuffledArray = new ArrayList<>();
     String[] originalArray;
@@ -83,7 +84,11 @@ public class ActivityGame extends AppCompatActivity {
             sjekksvaret.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    boolean isAnswerCorrect = sjekkSvar();
+                    // henter svar
+                    EditText skrivInnSvar = findViewById(R.id.skrivinn);
+                    String svar = skrivInnSvar.getText().toString();
+
+                    boolean isAnswerCorrect = sjekkSvar(svar);
                     TextView veiledning = findViewById(R.id.veiledning);
 
                     if(isAnswerCorrect) {
@@ -173,7 +178,8 @@ public class ActivityGame extends AppCompatActivity {
     }
 // kode som starter hver oppgave
     public void startOppgave(){
-        oppgaveteksten.setText(String.valueOf(shuffledArray.get(currentQuestionIndex)));
+        originalArray = getResources().getStringArray(R.array.questions);
+        oppgaveteksten.setText((originalArray[shuffledArray.get(currentQuestionIndex)]));
         // Hvert spørsmål har et bilde av et dyr
         ImageView imageView = findViewById(R.id.animals);
         imageView.setImageResource(animalArray[animalcounter]);
@@ -186,8 +192,9 @@ public class ActivityGame extends AppCompatActivity {
         //henter array med spørsmål
         originalArray = getResources().getStringArray(R.array.questions);
 
+
         // lager nytt array med spørsmål som er shuffled
-        for (int i = 0; i > originalArray.length -1; i++){
+        for (int i = 0; i < originalArray.length; i++){
             shuffledArray.add(i);
         }
 
@@ -202,7 +209,7 @@ public class ActivityGame extends AppCompatActivity {
         }
 
     }
-    public boolean sjekkSvar(){
+    public boolean sjekkSvar(String svar){
 
         //henter array med svar
         riktigSvarArray = getResources().getStringArray(R.array.answers);
@@ -214,11 +221,12 @@ public class ActivityGame extends AppCompatActivity {
 
         String correctAnswer = riktigSvarArray[shuffledIndex];
 
-        if (currentQuestion.equals(correctAnswer)){
+        if (svar.equals(correctAnswer)){
             return true;
         }
             // hvis svaret ikke stemmer
         return false;
+
     }
 
 
