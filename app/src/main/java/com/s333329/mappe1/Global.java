@@ -3,12 +3,13 @@ package com.s333329.mappe1;
 import android.app.Application;
 
 public class Global extends Application {
-    private String minvar = "";
+    private String antallSpill = "";
 
-    public String getminvar() {
-        return minvar;
+    public String getAntallSpill() {
+        return antallSpill;
     }
-    public void setminvar(String someVariable) {
-        this.minvar = someVariable;
+
+    public void setAntallSpill(String someVariable) {
+        this.antallSpill = someVariable;
     }
 }
