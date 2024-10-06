@@ -29,7 +29,7 @@ public class ActivityGame extends AppCompatActivity {
     private int animalcounter = 0;
     private int samletcounter = 0;
     private int oppgcounter = 1;
-    private String svar;
+
 
     ArrayList<Integer> shuffledArray = new ArrayList<>();
     String[] originalArray;
@@ -109,39 +109,36 @@ public class ActivityGame extends AppCompatActivity {
                             currentQuestionIndex = 0;
                             shuffledArray.clear();
                             startActivity(congratulations);
+                        } else{
+                            // hopper til neste oppgave, setter tekst og velger nytt bilde fra animalArray
+                            currentQuestionIndex ++;
+                            veiledning.setText(getString(R.string.riktig1));
+                            oppgaveteksten = findViewById(R.id.oppgavetekst);
+                            startOppgave();
+                            animalcounter++;
+                            // setter bilde ved sidenav oppgavetekst
+                            ImageView imageView = findViewById(R.id.animals);
+                            imageView.setImageResource(animalArray[animalcounter]);
+
+                            // viser samlet dyr
+                            for (int i = 0; i <= samletcounter; i++) {
+                                String imageViewId = "samlet" + (i + 1);  // generate the ImageView IDs dynamically
+                                int resId = getResources().getIdentifier(imageViewId, "id", getPackageName());  // get the resource ID
+                                ImageView samletDyr = findViewById(resId);  // find the ImageView by the resource ID
+                                samletDyr.setImageResource(animalArray[i]);  // set the image resource
+                                samletBildeArray[i] = animalArray[i]; // lagrer til array
+                            }
+
+
+
+                            // resetter tekstfelt på veiledning og tittel
+                            EditText skrivinnfelt = findViewById(R.id.skrivinn);
+                            skrivinnfelt.setText("");
+                            EditText tittel = findViewById(R.id.oppgavetittel);
+                            oppgcounter++;
+                            tittel.setText(getString(R.string.oppgavetittel, oppgcounter));
+                            samletcounter++;
                         }
-                        // hopper til neste oppgave, setter tekst og velger nytt bilde fra animalArray
-                        currentQuestionIndex ++;
-                        veiledning.setText(getString(R.string.riktig1));
-                        oppgaveteksten = findViewById(R.id.oppgavetekst);
-                        startOppgave();
-                        animalcounter++;
-                        // setter bilde ved sidenav oppgavetekst
-                        ImageView imageView = findViewById(R.id.animals);
-                        imageView.setImageResource(animalArray[animalcounter]);
-
-                        // viser samlet dyr
-                        for (int i = 0; i <= samletcounter; i++) {
-                            String imageViewId = "samlet" + (i + 1);  // generate the ImageView IDs dynamically
-                            int resId = getResources().getIdentifier(imageViewId, "id", getPackageName());  // get the resource ID
-                            ImageView samletDyr = findViewById(resId);  // find the ImageView by the resource ID
-                            samletDyr.setImageResource(animalArray[i]);  // set the image resource
-                            samletBildeArray[i] = animalArray[i]; // lagrer til array
-                        }
-
-                        // resetter verdi når man er ferdig med spillet
-                        if (samletcounter == animalArray.length){
-                            samletcounter = 0;
-                        }
-
-
-                        // resetter tekstfelt på veiledning og tittel
-                        EditText skrivinnfelt = findViewById(R.id.skrivinn);
-                        skrivinnfelt.setText("");
-                        EditText tittel = findViewById(R.id.oppgavetittel);
-                        oppgcounter++;
-                        tittel.setText(getString(R.string.oppgavetittel, oppgcounter));
-                        samletcounter++;
                     }
                     // melding om at man er på siste oppgave
                     if (currentQuestionIndex == numberOfQuestions-1){
@@ -201,8 +198,9 @@ public class ActivityGame extends AppCompatActivity {
     public void startOppgave(){
         originalArray = getResources().getStringArray(R.array.questions);
 
-        oppgaveteksten.setText((originalArray[shuffledArray.get(currentQuestionIndex)]));
-
+        if (!shuffledArray.isEmpty()){
+            oppgaveteksten.setText((originalArray[shuffledArray.get(currentQuestionIndex)]));
+        }
         // Hvert spørsmål har et bilde av et dyr
         ImageView imageView = findViewById(R.id.animals);
         imageView.setImageResource(animalArray[animalcounter]);

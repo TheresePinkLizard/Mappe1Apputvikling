@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/main"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:background="@drawable/bakgrunn4">
 
 
@@ -26,8 +26,8 @@
         style="@style/preferansetittel"
         android:layout_width="213dp"
         android:layout_height="32dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginStart="380dp"
+        android:layout_marginTop="136dp"
         android:text="@string/velgspraak"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,10 +37,10 @@
         style="@style/tastatur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="496dp"
-        android:text="@string/spraaktysk"
+        android:layout_marginStart="380dp"
+        android:layout_marginTop="232dp"
         android:clickable="true"
+        android:text="@string/spraaktysk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,10 +49,10 @@
         style="@style/tastatur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="448dp"
-        android:text="@string/spraaknorsk"
+        android:layout_marginStart="380dp"
+        android:layout_marginTop="184dp"
         android:clickable="true"
+        android:text="@string/spraaknorsk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

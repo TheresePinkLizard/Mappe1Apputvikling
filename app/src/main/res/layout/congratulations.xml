@@ -23,7 +23,7 @@
         style="@style/gratulerer"
         android:layout_width="251dp"
         android:layout_height="65dp"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="160dp"
         android:gravity="center"
         android:text="@string/gratulerer"
@@ -32,12 +32,12 @@
 
     <Button
         android:id="@+id/nyttSpill"
-        android:layout_width="138dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="304dp"
-        android:text="Nytt spill"
         style="@style/tastatur"
+        android:layout_width="208dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="316dp"
+        android:text="@string/nyttspill"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,9 +46,9 @@
         style="@style/tastatur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="380dp"
-        android:text="Tilbake til forside"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="372dp"
+        android:text="@string/tilbakeforside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

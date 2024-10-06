@@ -22,5 +22,7 @@
     <string name="velgspraak">Velg språk:</string>
     <string name="spraaknorsk">Norsk</string>
     <string name="spraaktysk">Tysk</string>
+    <string name="nyttspill">Nytt Spill</string>
+    <string name="tilbakeforside">Tilbake til forsiden</string>
 
 </resources>
