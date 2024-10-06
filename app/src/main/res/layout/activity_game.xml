@@ -203,10 +203,11 @@
 
     <TextView
         android:id="@+id/veiledning"
-        android:layout_width="258dp"
-        android:layout_height="40dp"
+        android:layout_width="269dp"
+        android:layout_height="69dp"
         android:layout_marginStart="116dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="144dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -223,11 +224,12 @@
 
     <EditText
         android:id="@+id/oppgavetittel"
-        android:layout_width="137dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="206dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="84dp"
         android:text="@string/oppgavetittel"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
