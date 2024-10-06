@@ -25,4 +25,7 @@
     <string name="spraaktysk">Deutsch</string>
     <string name="nyttspill">Neues Spiel</string>
     <string name="tilbakeforside">Zurück zur Titelseite</string>
+    <string name="dialogtittel">Möchten Sie das Spiel beenden?</string>
+    <string name="dialogja">Ja</string>
+    <string name="dialognei">Nein</string>
 </resources>

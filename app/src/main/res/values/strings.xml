@@ -24,5 +24,9 @@
     <string name="spraaktysk">Tysk</string>
     <string name="nyttspill">Nytt Spill</string>
     <string name="tilbakeforside">Tilbake til forsiden</string>
+    <string name="dialogtittel">Vil du avslutte spillet?</string>
+    <string name="dialogja">Ja</string>
+    <string name="dialognei">Nei</string>
+
 
 </resources>

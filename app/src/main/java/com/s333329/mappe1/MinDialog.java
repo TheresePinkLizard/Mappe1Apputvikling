@@ -27,13 +27,14 @@ public class MinDialog extends DialogFragment {
     }
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        return new
-                AlertDialog.Builder(getActivity()).setTitle("Vil du avslutte spillet?").setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                callback.onYesClick();
-            }
-        }).setNegativeButton("Avbryt", new
-                DialogInterface.OnClickListener() {
+        return new AlertDialog.Builder(getActivity())
+                .setTitle(getString(R.string.dialogtittel))
+                .setPositiveButton(getString(R.string.dialogja), new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        callback.onYesClick();
+                    }
+                })
+                .setNegativeButton(getString(R.string.dialognei), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         callback.onNoClick();
                     }
