@@ -23,7 +23,6 @@ public class ActivityGame extends AppCompatActivity {
     // Global variabel
     private Global global;
     private TextView oppgaveteksten;
-    private TextView veiledning;
     private int currentQuestionIndex = 0;
     private int animalcounter = 0;
     private int samletcounter = 0;
@@ -57,18 +56,14 @@ public class ActivityGame extends AppCompatActivity {
             oppgcounter = savedInstanceState.getInt("oppgcounter");
             currentQuestionIndex = savedInstanceState.getInt("currentQuestionIndex");
             shuffledArray = savedInstanceState.getIntegerArrayList("shuffledArray");
-
         }
 
         // initierer global verdi
         global = (Global) getApplicationContext();
 
-        // putter antall spill preferanse til global verdi
-      global = (Global) getApplicationContext();
-      SharedPreferences sharedPreferences = getSharedPreferences(getPackageName() + "_preferences", MODE_PRIVATE);
-        String antallmattestykker = sharedPreferences.getString("antallmattestykker", "5");
-      global.setAntallSpill(antallmattestykker);
-
+        if (global.getAntallSpill() == null || global.getAntallSpill().isEmpty()) {
+            global.setAntallSpill("5");
+        }
         // henter oppgaver og lager et array med shuffles spørsmål med global verdi som input
         int numberOfQuestions = Integer.parseInt(global.getAntallSpill());
         if (shuffledArray.isEmpty()){
@@ -78,6 +73,8 @@ public class ActivityGame extends AppCompatActivity {
         //starter oppgave ved å sende til display
         oppgaveteksten = findViewById(R.id.oppgavetekst);
         startOppgave();
+
+        Intent congratulations = new Intent(this, Congratulations.class);
 
         // sjekker om svaret er riktig når man trykker på knappen
             Button sjekksvaret = (Button) findViewById(R.id.sjekkSvar);
@@ -92,6 +89,12 @@ public class ActivityGame extends AppCompatActivity {
                     TextView veiledning = findViewById(R.id.veiledning);
 
                     if(isAnswerCorrect) {
+                        // hvis man er ferdig med spillet
+                        if(currentQuestionIndex == numberOfQuestions-1){
+                            currentQuestionIndex = 0;
+                            shuffledArray.clear();
+                            startActivity(congratulations);
+                        }
                         // hopper til neste oppgave, setter tekst og velger nytt bilde fra animalArray
                         currentQuestionIndex ++;
                         veiledning.setText(getString(R.string.riktig1));
@@ -124,14 +127,11 @@ public class ActivityGame extends AppCompatActivity {
                         veiledning.setText(R.string.riktig2);
                     }
 
-                    // hvis man er ferdig med spillet
-                    if(currentQuestionIndex == numberOfQuestions){
-                        // kommer opp dialog som spør om du skal avslutte spillet
-                    }
                     //hvis svaret er feil
                     if (!isAnswerCorrect){
                         veiledning = findViewById(R.id.veiledning);
                         veiledning.setText(R.string.feil1);
+                        skrivInnSvar.setText("");
                     }
                 }
             });
@@ -179,7 +179,9 @@ public class ActivityGame extends AppCompatActivity {
 // kode som starter hver oppgave
     public void startOppgave(){
         originalArray = getResources().getStringArray(R.array.questions);
+
         oppgaveteksten.setText((originalArray[shuffledArray.get(currentQuestionIndex)]));
+
         // Hvert spørsmål har et bilde av et dyr
         ImageView imageView = findViewById(R.id.animals);
         imageView.setImageResource(animalArray[animalcounter]);
@@ -191,13 +193,10 @@ public class ActivityGame extends AppCompatActivity {
     public void henteOppgave(int antall){
         //henter array med spørsmål
         originalArray = getResources().getStringArray(R.array.questions);
-
-
         // lager nytt array med spørsmål som er shuffled
         for (int i = 0; i < originalArray.length; i++){
             shuffledArray.add(i);
         }
-
         //shuffler array
         Collections.shuffle(shuffledArray);
 
@@ -210,11 +209,8 @@ public class ActivityGame extends AppCompatActivity {
 
     }
     public boolean sjekkSvar(String svar){
-
         //henter array med svar
         riktigSvarArray = getResources().getStringArray(R.array.answers);
-
-
         int shuffledIndex = shuffledArray.get(currentQuestionIndex);
 
         String currentQuestion = originalArray[shuffledIndex];
@@ -226,7 +222,6 @@ public class ActivityGame extends AppCompatActivity {
         }
             // hvis svaret ikke stemmer
         return false;
-
     }
 
 
@@ -261,7 +256,6 @@ public class ActivityGame extends AppCompatActivity {
         outstate.putInt("oppgcounter", oppgcounter);
         outstate.putInt("currentQuestionIndex", currentQuestionIndex);
         outstate.putIntegerArrayList("shuffledArray", shuffledArray);
-
 
     }
     @Override

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@drawable/bakgrunn4">
+
+    <ImageView
+        android:layout_width="404dp"
+        android:layout_height="287dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/confetti"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        style="@style/gratulerer"
+        android:layout_width="251dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:text="@string/gratulerer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nyttSpill"
+        android:layout_width="138dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="304dp"
+        android:text="Nytt spill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/spillSlutt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="380dp"
+        android:text="Tilbake til forside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/collectionanimals"
+        android:layout_width="217dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="560dp"
+        android:text="Dyrene du har samlet:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet2"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet4"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet5"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet6"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet7"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet8"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet15"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet9"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet10"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet11"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet12"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet13"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet14"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="652dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet3"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/samlet1"
+        android:layout_width="46dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="608dp"
+        android:src="@drawable/empthy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

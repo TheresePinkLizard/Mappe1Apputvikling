@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.preference.PreferenceManager;
 
@@ -67,17 +69,16 @@ public class MainActivity extends AppCompatActivity implements MinDialog.MittInt
         });
         // gå til preferanseside
         Button preferanseknapp = findViewById(R.id.preferanser);
-        Intent intent = new Intent(this,SettingsActivity.class);
+        Intent tilpreferanser = new Intent(this,Preferences.class);
         preferanseknapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(intent);
+                startActivity(tilpreferanser);
             }
         });
+
+
     }
-
-
-
 
 
 }

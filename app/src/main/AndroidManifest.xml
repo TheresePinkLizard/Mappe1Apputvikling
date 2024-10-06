@@ -25,6 +25,8 @@
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ActivityGame"/>
         <activity android:name=".ActivityAboutGame"/>
+        <activity android:name=".Congratulations"/>
+        <activity android:name=".Preferences"/>
     </application>
 
 </manifest>
