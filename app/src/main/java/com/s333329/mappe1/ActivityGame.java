@@ -108,6 +108,7 @@ public class ActivityGame extends AppCompatActivity {
                         ImageView imageView = findViewById(R.id.animals);
                         imageView.setImageResource(animalArray[animalcounter]);
 
+                        
                         // kode for å vise hvilke dyr som er samlet
                         String imageViewId = "samlet" + (samletcounter + 1);
                         // henter id til nåværende bilde
@@ -118,6 +119,7 @@ public class ActivityGame extends AppCompatActivity {
                         if (samletcounter == animalArray.length){
                             samletcounter = 0;
                         }
+
 
                         // resetter tekstfelt på veiledning og tittel
                         EditText skrivinnfelt = findViewById(R.id.skrivinn);

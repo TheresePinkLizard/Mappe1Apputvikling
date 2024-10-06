@@ -4,6 +4,7 @@ import android.app.Application;
 
 public class Global extends Application {
     private String antallSpill = "";
+    private int antallDyr = 0;
 
     public String getAntallSpill() {
         return antallSpill;

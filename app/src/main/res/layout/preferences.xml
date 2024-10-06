@@ -22,65 +22,12 @@
 
     <TextView
         android:id="@+id/changeLanguage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="236dp"
-        android:text="Endre Språk"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/antall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/preferansetittel"
+        android:layout_width="213dp"
+        android:layout_height="32dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="236dp"
-        android:text="Antall Spill"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tiSpill"
-        style="@style/tastatur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="328dp"
-        android:text="10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/femSpill"
-        style="@style/tastatur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="280dp"
-        android:text="5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/femtenSpill"
-        style="@style/tastatur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="376dp"
-        android:text="15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tilNorsk"
-        style="@style/tastatur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="280dp"
-        android:text="Norsk"
+        android:layout_marginTop="400dp"
+        android:text="@string/velgspraak"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,9 +36,64 @@
         style="@style/tastatur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="328dp"
-        android:text="Tysk"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="496dp"
+        android:text="@string/spraaktysk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tilNorsk"
+        style="@style/tastatur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="448dp"
+        android:text="@string/spraaknorsk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/antall"
+        style="@style/preferansetittel"
+        android:layout_width="213dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="136dp"
+        android:text="@string/antallspill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/femtenSpill"
+        style="@style/tastatur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="280dp"
+        android:text="15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/femSpill"
+        style="@style/tastatur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="184dp"
+        android:text="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tiSpill"
+        style="@style/tastatur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="232dp"
+        android:text="10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -17,5 +17,10 @@
     <string name="gratulerer">Gratulerer!</string>
     <string name="oppgavetittel">Oppgave %1$d</string>
     <string name="alledyrsamlet">Dyrene du har samlet:</string>
+    <string name="clear">Tøm</string>
+    <string name="antallspill">Antall spill:</string>
+    <string name="velgspraak">Velg språk:</string>
+    <string name="spraaknorsk">Norsk</string>
+    <string name="spraaktysk">Tysk</string>
 
 </resources>

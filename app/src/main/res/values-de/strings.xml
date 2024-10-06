@@ -18,4 +18,9 @@
     <string name="gratulerer">Glückwunsch!</string>
     <string name="oppgavetittel">Aufgabe %1$d</string>
     <string name="alledyrsamlet">Die Tiere, die Sie gesammelt haben:</string>
+    <string name="clear">Leer</string>
+    <string name="antallspill">Anzahl der Spiele:</string>
+    <string name="velgspraak">Sprache auswählen:</string>
+    <string name="spraaknorsk">Norwegisch</string>
+    <string name="spraaktysk">Deutsch</string>
 </resources>
