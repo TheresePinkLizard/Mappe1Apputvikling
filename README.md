@@ -16,7 +16,8 @@ https://www.vectorstock.com/royalty-free-vector/animals-face-stickers-cute-anima
 Bakgrunn:
 https://www.freepik.com/free-vector/colorful-frame-background-creative-design-kids-vector_20346181.htm#query=kids%20background&position=30&from_view=keyword&track=ais_hybrid&uuid=c1455395-00f2-45bd-81eb-d4e5423aa7e3
 
-
+Konfetti:
+https://clipart.info/confetti-png-transparent-picture-min-10141
 
 
 
