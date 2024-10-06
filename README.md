@@ -1,4 +1,4 @@
-# Matteopplæringsapp for barn (Under utvikling)
+# Matteopplæringsapp for barn 
 
 ### Dette prosjektet har jeg jobbet med alene og er gjennomført i faget DAVE3600-Apputvikling ved Oslomet.
 
