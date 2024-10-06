@@ -28,7 +28,7 @@ public class MinDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new
-                AlertDialog.Builder(getActivity()).setTitle("Vil du ut av programmet").setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                AlertDialog.Builder(getActivity()).setTitle("Vil du avslutte spillet?").setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
                 callback.onYesClick();
             }

@@ -18,7 +18,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ActivityGame extends AppCompatActivity {
+public class ActivityGame extends AppCompatActivity implements MinDialog.MittInterface{
 
     // Global variabel
     private Global antallvalgtspill;
@@ -46,6 +46,16 @@ public class ActivityGame extends AppCompatActivity {
     int [] buttonIds = { R.id.tall0, R.id.tall1, R.id.tall2, R.id.tall3,R.id.tall4, R.id.tall5,
             R.id.tall6, R.id.tall7, R.id.tall8, R.id.tall9};
 
+    // dialog for å avslutte spill
+    @Override
+    public void onYesClick(){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+    }
+
+    @Override
+    public void onNoClick(){
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,11 +184,11 @@ public class ActivityGame extends AppCompatActivity {
 
         //Avslutt spill knapp
         Button tilbakeTilStart = (Button) findViewById(R.id.avsluttSpillKnapp);
-        Intent i = new Intent(this, MainActivity.class);
         tilbakeTilStart.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                startActivity(i);
+                MinDialog dialog = new MinDialog();
+                dialog.show(getSupportFragmentManager(), "ExitGameDialog");
             }
         });
 
