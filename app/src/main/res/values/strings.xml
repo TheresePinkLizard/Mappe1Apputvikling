@@ -15,5 +15,7 @@
     <string name="preferanser">Preferanser</string>
     <string name="tilbakestart">Tilbake</string>
     <string name="gratulerer">Gratulerer!</string>
+    <string name="oppgavetittel">Oppgave %1$d</string>
+    <string name="alledyrsamlet">Dyrene du har samlet:</string>
 
 </resources>

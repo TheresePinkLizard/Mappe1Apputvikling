@@ -16,4 +16,6 @@
     <string name="preferanser">Vorlieben</string>
     <string name="tilbakestart">zurück</string>
     <string name="gratulerer">Glückwunsch!</string>
+    <string name="oppgavetittel">Aufgabe %1$d</string>
+    <string name="alledyrsamlet">Die Tiere, die Sie gesammelt haben:</string>
 </resources>

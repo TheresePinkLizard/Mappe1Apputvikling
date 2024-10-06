@@ -76,6 +76,10 @@ public class ActivityGame extends AppCompatActivity {
 
         Intent congratulations = new Intent(this, Congratulations.class);
 
+        // gjør at språk blir oppdatert når første oppgave loades
+        EditText tittel = findViewById(R.id.oppgavetittel);
+        tittel.setText(getString(R.string.oppgavetittel, oppgcounter));
+
         // sjekker om svaret er riktig når man trykker på knappen
             Button sjekksvaret = (Button) findViewById(R.id.sjekkSvar);
             sjekksvaret.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +124,7 @@ public class ActivityGame extends AppCompatActivity {
                         skrivinnfelt.setText("");
                         EditText tittel = findViewById(R.id.oppgavetittel);
                         oppgcounter++;
-                        tittel.setText("Oppgave " + oppgcounter);
+                        tittel.setText(getString(R.string.oppgavetittel, oppgcounter));
                     }
                     // melding om at man er på siste oppgave
                     if (currentQuestionIndex == numberOfQuestions-1){
