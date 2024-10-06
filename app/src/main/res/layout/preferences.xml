@@ -39,6 +39,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="496dp"
         android:text="@string/spraaktysk"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,6 +51,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="448dp"
         android:text="@string/spraaknorsk"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,6 +74,8 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="280dp"
         android:text="15"
+        android:clickable="true"
+        android:backgroundTint="@drawable/button_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,6 +87,8 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="184dp"
         android:text="5"
+        android:clickable="true"
+        android:backgroundTint="@drawable/button_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,7 +99,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="232dp"
+        android:backgroundTint="@drawable/button_background"
         android:text="10"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

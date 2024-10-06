@@ -4,16 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Congratulations extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.congratulations);
-
 
         Button startNyttSpill = (Button) findViewById(R.id.nyttSpill);
         Intent i = new Intent(this, ActivityGame.class);
@@ -35,5 +36,7 @@ public class Congratulations extends AppCompatActivity {
                 startActivity(j);
             }
         });
+
+
     }
 }

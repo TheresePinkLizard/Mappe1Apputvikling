@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
 import android.content.SharedPreferences;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Preferences extends AppCompatActivity {
 
     @Override
@@ -20,9 +23,24 @@ public class Preferences extends AppCompatActivity {
 
         Global global = (Global) getApplicationContext();
 
+        Button tilbakeTilStart = (Button) findViewById(R.id.tilbakeStart);
+
         Button femSpill = findViewById(R.id.femSpill);
         Button tiSpill = findViewById(R.id.tiSpill);
         Button femtenSpill = findViewById(R.id.femtenSpill);
+
+        Button tysk = findViewById(R.id.tilTysk);
+        Button norsk = findViewById(R.id.tilNorsk);
+
+
+        // tilbake til start
+        Intent i = new Intent(this, MainActivity.class);
+        tilbakeTilStart.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(i);
+            }
+        });
 
         femSpill.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +48,7 @@ public class Preferences extends AppCompatActivity {
                 // Store button text in global variable
                 String newValue = femSpill.getText().toString();
                 global.setAntallSpill(newValue);
+
 
                 // Save to SharedPreferences
                 SharedPreferences sharedPreferences = getSharedPreferences("MinePreferanser", Context.MODE_PRIVATE);
@@ -44,6 +63,7 @@ public class Preferences extends AppCompatActivity {
                 // Store button text in global variable
                 String newValue = tiSpill.getText().toString();
                 global.setAntallSpill(newValue);
+
 
                 // Save to SharedPreferences
                 SharedPreferences sharedPreferences = getSharedPreferences("MinePreferanser", Context.MODE_PRIVATE);
@@ -68,22 +88,6 @@ public class Preferences extends AppCompatActivity {
         });
 
 
-
-
-
-        Button tilbakeTilStart = (Button) findViewById(R.id.tilbakeStart);
-
-        Intent i = new Intent(this, MainActivity.class);
-
-        tilbakeTilStart.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                startActivity(i);
-            }
-        });
-
-        Button tysk = findViewById(R.id.tilTysk);
-
         tysk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,7 +95,7 @@ public class Preferences extends AppCompatActivity {
                 AppCompatDelegate.setApplicationLocales(appLocale);
             }
         });
-        Button norsk = findViewById(R.id.tilNorsk);
+
 
         norsk.setOnClickListener(new View.OnClickListener() {
             @Override

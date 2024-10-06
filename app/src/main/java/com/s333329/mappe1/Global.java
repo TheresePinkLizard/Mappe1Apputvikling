@@ -13,4 +13,12 @@ public class Global extends Application {
     public void setAntallSpill(String someVariable) {
         this.antallSpill = someVariable;
     }
+
+    public int getAntallDyr() {
+        return antallDyr;
+    }
+
+    public void setAntallDyr(int someVariable) {
+        this.antallDyr = someVariable;
+    }
 }

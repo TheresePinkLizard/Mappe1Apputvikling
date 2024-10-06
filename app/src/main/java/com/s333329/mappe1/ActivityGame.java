@@ -21,7 +21,9 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ActivityGame extends AppCompatActivity {
 
     // Global variabel
-    private Global global;
+    private Global antallvalgtspill;
+
+
     private TextView oppgaveteksten;
     private int currentQuestionIndex = 0;
     private int animalcounter = 0;
@@ -32,6 +34,7 @@ public class ActivityGame extends AppCompatActivity {
     ArrayList<Integer> shuffledArray = new ArrayList<>();
     String[] originalArray;
     String[] riktigSvarArray;
+    private int[] samletBildeArray = new int[15];
 
     //Dyrebilder
     int[] animalArray = {R.drawable.mouse, R.drawable.cat, R.drawable.dog,  R.drawable.monkeynew,
@@ -56,16 +59,24 @@ public class ActivityGame extends AppCompatActivity {
             oppgcounter = savedInstanceState.getInt("oppgcounter");
             currentQuestionIndex = savedInstanceState.getInt("currentQuestionIndex");
             shuffledArray = savedInstanceState.getIntegerArrayList("shuffledArray");
+            samletBildeArray = savedInstanceState.getIntArray("samletImagesArray");
+            // Set the images on the ImageViews
+            for (int i = 0; i < samletcounter; i++) {
+                String imageViewId = "samlet" + (i + 1);
+                int resId = getResources().getIdentifier(imageViewId, "id", getPackageName());
+                ImageView samletDyr = findViewById(resId);
+                samletDyr.setImageResource(samletBildeArray[i]);
+            }
         }
 
         // initierer global verdi
-        global = (Global) getApplicationContext();
+        antallvalgtspill = (Global) getApplicationContext();
 
-        if (global.getAntallSpill() == null || global.getAntallSpill().isEmpty()) {
-            global.setAntallSpill("5");
+        if (antallvalgtspill.getAntallSpill() == null || antallvalgtspill.getAntallSpill().isEmpty()) {
+            antallvalgtspill.setAntallSpill("5");
         }
         // henter oppgaver og lager et array med shuffles spørsmål med global verdi som input
-        int numberOfQuestions = Integer.parseInt(global.getAntallSpill());
+        int numberOfQuestions = Integer.parseInt(antallvalgtspill.getAntallSpill());
         if (shuffledArray.isEmpty()){
             henteOppgave(numberOfQuestions);
         }
@@ -105,17 +116,20 @@ public class ActivityGame extends AppCompatActivity {
                         oppgaveteksten = findViewById(R.id.oppgavetekst);
                         startOppgave();
                         animalcounter++;
+                        // setter bilde ved sidenav oppgavetekst
                         ImageView imageView = findViewById(R.id.animals);
                         imageView.setImageResource(animalArray[animalcounter]);
 
-                        
-                        // kode for å vise hvilke dyr som er samlet
-                        String imageViewId = "samlet" + (samletcounter + 1);
-                        // henter id til nåværende bilde
-                        int resId = getResources().getIdentifier(imageViewId, "id", getPackageName());
-                        ImageView samletDyr = findViewById(resId);
-                        samletDyr.setImageResource(animalArray[samletcounter]);
-                        samletcounter ++;
+                        // viser samlet dyr
+                        for (int i = 0; i <= samletcounter; i++) {
+                            String imageViewId = "samlet" + (i + 1);  // generate the ImageView IDs dynamically
+                            int resId = getResources().getIdentifier(imageViewId, "id", getPackageName());  // get the resource ID
+                            ImageView samletDyr = findViewById(resId);  // find the ImageView by the resource ID
+                            samletDyr.setImageResource(animalArray[i]);  // set the image resource
+                            samletBildeArray[i] = animalArray[i]; // lagrer til array
+                        }
+
+                        // resetter verdi når man er ferdig med spillet
                         if (samletcounter == animalArray.length){
                             samletcounter = 0;
                         }
@@ -127,6 +141,7 @@ public class ActivityGame extends AppCompatActivity {
                         EditText tittel = findViewById(R.id.oppgavetittel);
                         oppgcounter++;
                         tittel.setText(getString(R.string.oppgavetittel, oppgcounter));
+                        samletcounter++;
                     }
                     // melding om at man er på siste oppgave
                     if (currentQuestionIndex == numberOfQuestions-1){
@@ -236,9 +251,13 @@ public class ActivityGame extends AppCompatActivity {
         super.onResume();
         SharedPreferences sharedPreferences = getSharedPreferences("MinePreferanser", Context.MODE_PRIVATE);
 
-        // Restored the text of EditText from the global variable
+       // lagrer antall spill til global verdi
         String antallmattestykker = sharedPreferences.getString("antallmattestykker", "5");
-        global.setAntallSpill(antallmattestykker);
+        antallvalgtspill.setAntallSpill(antallmattestykker);
+
+        // lagrer antall dyr til global verdi
+        String antallDyr = sharedPreferences.getString("antallDyr", "0");
+        antallvalgtspill.setAntallSpill(antallmattestykker);
     }
     @Override
     protected void onPause() {
@@ -248,7 +267,7 @@ public class ActivityGame extends AppCompatActivity {
 
         // lagre til global variabel
         String antallmattestykker = sharedPreferences.getString("antallmattestykker", "5");
-        global.setAntallSpill(antallmattestykker);
+        antallvalgtspill.setAntallSpill(antallmattestykker);
 
         editor.apply();
     }
@@ -262,6 +281,7 @@ public class ActivityGame extends AppCompatActivity {
         outstate.putInt("oppgcounter", oppgcounter);
         outstate.putInt("currentQuestionIndex", currentQuestionIndex);
         outstate.putIntegerArrayList("shuffledArray", shuffledArray);
+        outstate.putIntArray("samletImagesArray", samletBildeArray);
 
     }
     @Override
