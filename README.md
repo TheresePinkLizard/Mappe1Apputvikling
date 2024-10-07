@@ -9,7 +9,7 @@ I **Preferanser** er det lagt til mulighet for å endre antall spill og velge sp
 Norsk og tysk. Når du trykker **Start Spillet** så vil du få opp addisjonsregnestykker og hvert regnestykke har et dyr 
 assosiert til det. Når du klarer regnestykket så lages dyrene som en samling nederst på siden. 
 
-### Dyrebildene og bakgrunnsbildet er hentet fra Google Images:
+### Dyrebildene og bakgrunnsbilder er hentet fra Google Images:
 Dyr:
 https://www.vectorstock.com/royalty-free-vector/animals-face-stickers-cute-animal-faces-kawaii-vector-22498340
 
